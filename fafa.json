@@ -1,0 +1,136 @@
+The development server has disconnected.
+Refresh the page if necessary. bundle.js:7353:13
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools react-dom.development.js:26244
+Warning: Received `true` for a non-boolean attribute `disable`.
+
+If you want to write it to the DOM, pass a string instead: disable="true" or disable={value.toString()}.
+option
+select
+div
+SelectFrom@http://localhost:3000/static/js/bundle.js:49828:55
+div
+div
+App@http://localhost:3000/static/js/bundle.js:49730:74 index.js:2178
+./src/App.js
+  Line 1:  'logo' is defined but never used  no-unused-vars webpackHotDevClient.js:138
+Array(40) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+​
+0: Object { dt: 1623002400, visibility: 10000, pop: 0.47, … }
+​​
+clouds: Object { all: 56 }
+​​
+dt: 1623002400
+​​
+dt_txt: "2021-06-06 18:00:00"
+​​
+main: Object { temp: 24.14, feels_like: 24.86, temp_min: 24.14, … }
+​​
+pop: 0.47
+​​
+rain: Object { 3h: 3.28 }
+​​
+sys: Object { pod: "d" }
+​​
+visibility: 10000
+​​
+weather: Array [ {…} ]
+​​
+wind: Object { speed: 3.75, deg: 155, gust: 8.35 }
+​​
+<prototype>: Object { … }
+​
+1: Object { dt: 1623013200, visibility: 10000, pop: 0.53, … }
+​
+2: Object { dt: 1623024000, visibility: 10000, pop: 0.81, … }
+​
+3: Object { dt: 1623034800, visibility: 719, pop: 0.99, … }
+​
+4: Object { dt: 1623045600, visibility: 10000, pop: 1, … }
+​
+5: Object { dt: 1623056400, visibility: 10000, pop: 0, … }
+​
+6: Object { dt: 1623067200, visibility: 10000, pop: 0, … }
+​
+7: Object { dt: 1623078000, visibility: 10000, pop: 0.76, … }
+​
+8: Object { dt: 1623088800, visibility: 10000, pop: 0.84, … }
+​
+9: Object { dt: 1623099600, visibility: 10000, pop: 0.57, … }
+​
+10: Object { dt: 1623110400, visibility: 10000, pop: 0.44, … }
+​
+11: Object { dt: 1623121200, visibility: 10000, pop: 0.04, … }
+​
+12: Object { dt: 1623132000, visibility: 10000, pop: 0.24, … }
+​
+13: Object { dt: 1623142800, visibility: 10000, pop: 0.45, … }
+​
+14: Object { dt: 1623153600, visibility: 10000, pop: 0.31, … }
+​
+15: Object { dt: 1623164400, visibility: 10000, pop: 0.37, … }
+​
+16: Object { dt: 1623175200, visibility: 10000, pop: 0.59, … }
+​
+17: Object { dt: 1623186000, visibility: 10000, pop: 0.74, … }
+​
+18: Object { dt: 1623196800, visibility: 10000, pop: 0.87, … }
+​
+19: Object { dt: 1623207600, visibility: 10000, pop: 0.19, … }
+​
+20: Object { dt: 1623218400, visibility: 10000, pop: 0.3, … }
+​
+21: Object { dt: 1623229200, visibility: 10000, pop: 0.35, … }
+​
+22: Object { dt: 1623240000, visibility: 10000, pop: 0.29, … }
+​
+23: Object { dt: 1623250800, visibility: 10000, pop: 0.84, … }
+​
+24: Object { dt: 1623261600, visibility: 10000, pop: 0.85, … }
+​
+25: Object { dt: 1623272400, visibility: 10000, pop: 0.17, … }
+​
+26: Object { dt: 1623283200, visibility: 10000, pop: 0.6, … }
+​
+27: Object { dt: 1623294000, visibility: 10000, pop: 0.95, … }
+​
+28: Object { dt: 1623304800, visibility: 10000, pop: 0.99, … }
+​
+29: Object { dt: 1623315600, visibility: 10000, pop: 0.22, … }
+​
+30: Object { dt: 1623326400, visibility: 10000, pop: 0.28, … }
+​
+31: Object { dt: 1623337200, visibility: 10000, pop: 0.69, … }
+​
+32: Object { dt: 1623348000, visibility: 9853, pop: 0.99, … }
+​
+33: Object { dt: 1623358800, visibility: 10000, pop: 1, … }
+​
+34: Object { dt: 1623369600, visibility: 10000, pop: 1, … }
+​
+35: Object { dt: 1623380400, visibility: 10000, pop: 0.08, … }
+​
+36: Object { dt: 1623391200, visibility: 10000, pop: 0.25, … }
+​
+37: Object { dt: 1623402000, visibility: 10000, pop: 0.03, … }
+​
+38: Object { dt: 1623412800, visibility: 10000, pop: 0.32, … }
+​
+39: Object { dt: 1623423600, visibility: 10000, pop: 0.38, … }
+​
+length: 40
+​
+<prototype>: Array []
+App.js:71
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the render method of `ShowWeather`. See https://reactjs.org/link/warning-keys for more information.
+tr
+ShowWeather@http://localhost:3000/static/js/bundle.js:49861:3
+div
+App@http://localhost:3000/static/js/bundle.js:49730:74 index.js:2178
+Warning: Invalid DOM property `class`. Did you mean `className`?
+table
+div
+ShowWeather@http://localhost:3000/static/js/bundle.js:49861:3
+div
+App@http://localhost:3000/static/js/bundle.js:49730:74 index.js:2178
