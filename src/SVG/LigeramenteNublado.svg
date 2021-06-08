@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="66mm"
+   height="51.056mm"
+   viewBox="0 0 66 51.056"
    version="1.1"
    id="svg4088"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="LigeramenteNublado.svg">
   <defs
      id="defs4082" />
@@ -25,17 +23,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="400"
-     inkscape:cy="560"
+     inkscape:zoom="3.959798"
+     inkscape:cx="133.16075"
+     inkscape:cy="101.29326"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="716"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata4085">
     <rdf:RDF>
@@ -54,7 +53,7 @@
      id="layer1">
     <g
        id="g13507"
-       transform="matrix(0.26458333,0,0,0.26458333,27.185909,27.355092)">
+       transform="matrix(0.5660957,0,0,0.5660957,-99.766648,-12.723048)">
       <g
          id="g4992"
          transform="matrix(0.77838,0,0,0.77838,134.02,5.4519)">
@@ -66,7 +65,7 @@
            inkscape:connector-curvature="0" />
         <path
            id="path4996"
-           style="color:#000000;fill:#ffffff;stroke:#f5ff12;stroke-width:8.52709961;stroke-miterlimit:0.5"
+           style="color:#000000;fill:#ffffff;stroke:#f5ff12;stroke-width:8.5271;stroke-miterlimit:0.5"
            d="m 194.52,77.284 a 39.901,37.407 0 1 1 -79.8,0 39.901,37.407 0 1 1 79.8,0 z"
            transform="matrix(0.97997,0,0,0.87717,-39.126,6.6049)"
            stroke-miterlimit=".5"
@@ -74,7 +73,7 @@
       </g>
       <path
          id="path4990"
-         style="color:#000000;fill:#ffffff;stroke:#6778e9;stroke-width:6.15399981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0.5"
+         style="color:#000000;fill:#ffffff;stroke:#6778e9;stroke-width:6.154;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0.5"
          d="m 268.24,54.99 c -5.8,0 -10.76,3.021 -13.2,7.36 -0.97,-0.543 -2.05,-0.875 -3.2,-0.875 -3.46,0 -6.34,2.785 -7.23,6.566 -1.52,-0.6 -3.28,-0.972 -5.16,-0.972 -5.67,0 -10.27,3.102 -10.27,6.923 0,3.448 3.77,6.285 8.67,6.809 -0.22,0.372 -0.4,0.744 -0.4,1.135 0,3.658 10.03,6.631 22.38,6.631 12.35,0 22.37,-2.973 22.37,-6.631 0,-0.246 -0.16,-0.474 -0.25,-0.713 0.54,0.134 1.09,0.275 1.68,0.275 3.3,0 5.98,-2.246 5.98,-5.01 0,-2.763 -2.68,-4.993 -5.98,-4.993 -0.4,0 -0.76,0.13 -1.14,0.194 0.33,-1.105 0.56,-2.238 0.56,-3.437 0,-7.315 -6.63,-13.262 -14.81,-13.262 z"
          stroke-miterlimit=".5"
          inkscape:connector-curvature="0" />
