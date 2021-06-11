@@ -12,6 +12,7 @@ function App() {
   const [selected, setSelected] = useState({})
   const [weatherNow, setWeatherNow] = useState('')
   const [currentWeather, setCurrentWeather] = useState('')
+  const [charging, setCharging] = useState(false)
 
   useEffect(()=>{
     if(selected.city)
@@ -19,7 +20,10 @@ function App() {
       weather(selected)
       .then(response=>setWeatherNow(response.data))
       weatherCurrent(selected)
-      .then(response => setCurrentWeather(response.data))
+      .then(response => { 
+        setCharging(false);
+        console.log(response, "peron")
+        return setCurrentWeather(response.data)})
     }
     
   },[selected])
@@ -28,16 +32,15 @@ function App() {
     setCity(event.target.value);
   }
   const onSubmitHandler = (event) =>{
+
+    
+    setCharging(true);
     event.preventDefault();
     listOfCities({name: city})
     .then(response => setSelected({city: response[0]}))
     
   }
-  const onChangeCity = (event) => 
-  {
-    const final = JSON.parse(event.target.value)
-    setSelected({...selected, city: final})
-  }
+  console.log(charging, "vamos menem")
   return (
     <div style={style1}className="">
       <header >
@@ -48,10 +51,11 @@ function App() {
       <div className="container p-5">
         <CityFinder cityValue={city} onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler}/>
       </div>
-      <div style={style1} className="bg-primary">
+      <div style={style1} >
+        {selected.city ?  <h2>{selected.city.value}</h2> : ""}
         {currentWeather ? <ShowWeather weather={currentWeather} ciudad={selected.city}/>: ""}
         {weatherNow ? <ShowWeather weather={weatherNow} ciudad={selected.city}/>: ""}
-
+        {charging &&  <Spinner className="" />}
       </div>
     </div>
   );
@@ -61,7 +65,16 @@ function App() {
 
 
 
+const Spinner = () => {
+   return (
+     <div className="d-flex justify-content-center w-100">
+      <div className="mx-auto spinner-border text-primary" role="status">
+        <span className=" visually-hidden">Loading...</span>
+      </div>
 
+     </div>
+   )
+}
 
 const CityFinder = (props) =>{
   return(
@@ -98,11 +111,12 @@ const ShowWeather = (props) => {
         pop: actual.pop
       }
       return(
-        <ClimateShow climate={JSON.stringify(climate)}/>
+          
+          <ClimateShow climate={JSON.stringify(climate)}/>
       )
 
   }
-  return (<div className="d-flex flex-sm-wrap container">
+  return (<div className="d-flex flex-wrap container">
   {
     props.weather.list ? 
       props.weather.list.map(mapFunction)
