@@ -52,8 +52,8 @@ function App() {
       <div className="container p-5">
         <CityFinder cityValue={city} onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler}/>
       </div>
-      <div style={style1} >
-        {selected.city ?  <h2>{selected.city.value}</h2> : ""}
+      <div className="container">
+        {selected.city ?  <h2 className=" p-2">{selected.city.value}</h2> : ""}
         {currentWeather ? <ShowWeather weather={currentWeather} ciudad={selected.city}/>: ""}
         {weatherNow ? <ShowWeather weather={weatherNow} ciudad={selected.city}/>: ""}
         {charging &&  <Spinner className="" />}
@@ -68,7 +68,7 @@ function App() {
 
 const Spinner = () => {
    return (
-     <div className="d-flex justify-content-center w-100">
+     <div className=" d-flex justify-content-center w-100">
       <div className="mx-auto spinner-border text-primary" role="status">
         <span className=" visually-hidden">Loading...</span>
       </div>
@@ -94,6 +94,7 @@ CityFinder.propTypes = {
 }
 
 const ShowWeather = (props) => {
+  const ifActual = props.weather.list ? false : true
   const mapFunction = (actual) => {
     const dAndH = DateTime.fromMillis(actual.dt*1000).setZone(props.ciudad.timeZone).toLocaleString(DateTime.DATETIME_SHORT)
       const climate = {
@@ -106,10 +107,13 @@ const ShowWeather = (props) => {
       }
       return(
           
-          <ClimateShow climate={JSON.stringify(climate)}/>
+          <ClimateShow climate={JSON.stringify(climate)}>
+            {ifActual && "Clima Actual"}
+          </ClimateShow>
       )
 
   }
+ 
   return (<div className="d-flex flex-wrap container">
   {
     props.weather.list ? 

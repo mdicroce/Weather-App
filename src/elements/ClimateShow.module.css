@@ -1,3 +1,28 @@
-.climateClass{
-    
+.climateClass {
+  border-radius: 0.25rem;
+  background-color: #f1f1f2;
+  padding: 0.5rem;
+  flex: 1 1 auto;
+  border: 3px solid #fff;
+  margin: 0.5rem 0;
+  width: 50%;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+
+
+  .climateClass {
+    width: 25% !important;
+  }
+}
+@media (max-width: 767px) {
+  .climateAuxiliar {
+    align-self: flex-end !important;
+
+  }
+  .climateFigure {
+    width: 50% !important;
+  
+    text-align: end !important;
+  }
 }

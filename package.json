@@ -42,7 +42,9 @@
   },
   "devDependencies": {
     "@svgr/parcel-plugin-svgr": "^5.5.0",
+    "css-loader": "^5.2.6",
     "eslint": "^7.28.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.24.0",
+    "style-loader": "^2.0.0"
   }
 }
