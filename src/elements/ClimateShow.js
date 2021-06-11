@@ -37,7 +37,7 @@ const climateSVG = {
 export const ClimateShow = (props) => {
   const climate = JSON.parse(props.climate)
   const styleWithWidth = climateShow.climateFigure + " "
-  console.log(climateShow)
+
   if(props.children)
   {
     return (

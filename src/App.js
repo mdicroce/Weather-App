@@ -23,7 +23,7 @@ function App() {
       weatherCurrent(selected)
       .then(response => { 
         setCharging(false);
-        console.log(response, "peron")
+        
         return setCurrentWeather(response.data)})
     }
     
@@ -41,7 +41,6 @@ function App() {
     .then(response => setSelected({city: response[0]}))
     
   }
-  console.log(charging, "vamos menem")
   return (
     <div style={style1}className="">
       <header >
