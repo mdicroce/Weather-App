@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/parcel-plugin-svgr": "^5.5.0"
+    "@svgr/parcel-plugin-svgr": "^5.5.0",
+    "eslint": "^7.28.0",
+    "eslint-plugin-react": "^7.24.0"
   }
 }
