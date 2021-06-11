@@ -3,9 +3,10 @@ import {weatherCurrent, listOfCities, weather} from './services/axios'
 import React, { useEffect, useState } from 'react'
 import {DateTime} from 'luxon'
 import {ClimateShow} from './elements/ClimateShow'
-import clouds from './IMG/clouds.jpg'
+import Proptypes from 'prop-types'
+import dotenv from 'dotenv'
+dotenv.config()
 
-require('dotenv').config()
 
 function App() {
   const[city,setCity] = useState([])
@@ -86,17 +87,10 @@ const CityFinder = (props) =>{
     </div>
   )
 }
-const SelectFrom = (props) => {
-  return (
-    <div>
-      <select className='mb-3 form-select form-select-sm' onInput={props.onChangeHandler} >
-        <option value="" disable hidden>Please Choose...</option>
-        {props.selection.map((actual,index)=> {
-          return (<option value={JSON.stringify({value: actual.value, key: actual.key, timeZone: actual.timezone})} key={actual.value+index}>{actual.value}</option>)
-        })}
-      </select>
-    </div> 
-  )
+CityFinder.propTypes = {
+  cityValue : Proptypes.string,
+  onChangeHandler: Proptypes.func,
+  onSubmitHandler: Proptypes.func
 }
 
 const ShowWeather = (props) => {
@@ -125,6 +119,10 @@ const ShowWeather = (props) => {
   }
   </div>
   )
+}
+ShowWeather.propTypes = {
+  weather: Proptypes.object,
+  ciudad: Proptypes.object
 }
 
 const style1 = {
