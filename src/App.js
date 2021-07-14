@@ -1,6 +1,6 @@
 import './App.css';
-import {weatherCurrent, listOfCities, weather} from './services/axios' 
-import React, { useEffect, useState } from 'react'
+import {weatherCurrent,listOfCities, weather} from './services/axios' 
+import React, { useState } from 'react'
 import {DateTime} from 'luxon'
 import {ClimateShow} from './elements/ClimateShow'
 import Proptypes from 'prop-types'
@@ -15,19 +15,7 @@ function App() {
   const [currentWeather, setCurrentWeather] = useState('')
   const [charging, setCharging] = useState(false)
 
-  useEffect(()=>{
-    if(selected.city)
-    {
-      weather(selected)
-      .then(response=>setWeatherNow(response.data))
-      weatherCurrent(selected)
-      .then(response => { 
-        setCharging(false);
-        
-        return setCurrentWeather(response.data)})
-    }
-    
-  },[selected])
+
 
   const onChangeHandler = (event) => {
     setCity(event.target.value);
@@ -38,28 +26,38 @@ function App() {
     setCharging(true);
     event.preventDefault();
     listOfCities({name: city})
-    .then(response => setSelected({city: response[0]}))
+    .then(response => response ? setSelected({city: response[0]}): "")
+    weather({city: city})
+    .then((response => { setWeatherNow(response.data)}))
+    weatherCurrent({city:city})
+    .then((response) => {
+      
+      setCharging(false)
+      setCurrentWeather(response.data)
+    })
+    }
     
+    
+    return (
+      <div style={style1}className="">
+        <header >
+          
+         <h1 className="text-center display-1 mb-1">Weather App </h1>
+  
+        </header>
+        <div className="container p-5">
+          <CityFinder cityValue={city} onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler}/>
+        </div>
+        <div className="container">
+          {selected.city ?  <h2 className=" p-2">{selected.city.value}</h2> : ""}
+          {currentWeather ? <ShowWeather weather={currentWeather} ciudad={selected.city}/>: ""}
+          {weatherNow ? <ShowWeather weather={weatherNow} ciudad={selected.city}/>: ""}
+          {charging &&  <Spinner className="" />}
+        </div>
+      </div>
+    );
   }
-  return (
-    <div style={style1}className="">
-      <header >
-        
-       <h1 className="text-center display-1 mb-1">Weather App </h1>
-
-      </header>
-      <div className="container p-5">
-        <CityFinder cityValue={city} onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler}/>
-      </div>
-      <div className="container">
-        {selected.city ?  <h2 className=" p-2">{selected.city.value}</h2> : ""}
-        {currentWeather ? <ShowWeather weather={currentWeather} ciudad={selected.city}/>: ""}
-        {weatherNow ? <ShowWeather weather={weatherNow} ciudad={selected.city}/>: ""}
-        {charging &&  <Spinner className="" />}
-      </div>
-    </div>
-  );
-}
+  
 
 
 
@@ -77,6 +75,7 @@ const Spinner = () => {
 }
 
 const CityFinder = (props) =>{
+  
   return(
     <div className="container ">
       <form>
@@ -95,7 +94,7 @@ CityFinder.propTypes = {
 const ShowWeather = (props) => {
   const ifActual = props.weather.list ? false : true
   const mapFunction = (actual) => {
-    const dAndH = DateTime.fromMillis(actual.dt*1000).setZone(props.ciudad.timeZone).toLocaleString(DateTime.DATETIME_SHORT)
+    const dAndH = DateTime.fromMillis(actual.dt*1000).setZone(props.ciudad.timeZone ? props.ciudad.timeZone : "Europe/London").toLocaleString(DateTime.DATETIME_SHORT)
       const climate = {
         hour : dAndH,
         temp : actual.main.temp,
